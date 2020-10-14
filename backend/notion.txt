@@ -1,0 +1,9 @@
+{
+	"name": "Lar das crianças",
+	"latitude": -15.7733008,
+	"longitude": -47.9242097,
+	"about": "Orfanato da Pr.Ana Cunha",
+	"instructions": "Venha visitar",
+	"opening_hours": "Das 8h até as 18h",
+	"open_on_weekends": true
+}
