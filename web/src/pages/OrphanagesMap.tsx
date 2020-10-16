@@ -25,22 +25,21 @@ function OrphanagesMap() {
       setOrphanages(response.data);
     });
   }, []);
-
   
   return(
     <div id="page-map">
       <aside>
-          <header>
-              <img src={mapMarkerImg} alt="Happy" />
+        <header>
+            <img src={mapMarkerImg} alt="Happy" />
 
-              <h2>Escolha um orfanato no mapa</h2>
-              <p>Muitas crianças estão esperando a sua  visita :) </p>
-          </header>
+            <h2>Escolha um orfanato no mapa</h2>
+            <p>Muitas crianças estão esperando a sua  visita :) </p>
+        </header>
 
-          <footer>
-              <strong>Brasília</strong>
-              <span>Distrito Federal</span>
-          </footer>
+        <footer>
+            <strong>Brasília</strong>
+            <span>Distrito Federal</span>
+        </footer>
       </aside>
 
       <Map 
@@ -53,17 +52,17 @@ function OrphanagesMap() {
 
        {orphanages.map(orphanage => {
          return (
-            <Marker 
-              key={orphanage.id}
-              icon={mapIcon}
-              position={[orphanage.latitude, orphanage.longitude]}
-            >
-              <Popup closeButton={false} minWidth={240} maxHeight={240} className="map-popup">
-                {orphanage.name}
-                <Link to={`/orphanage/${orphanage.id}`}>
-                  <FiArrowDownRight size={20} color="#fff" />
-                </Link>
-              </Popup>
+          <Marker 
+            key={orphanage.id}
+            icon={mapIcon}
+            position={[orphanage.latitude, orphanage.longitude]}
+          >
+            <Popup closeButton={false} minWidth={240} maxHeight={240} className="map-popup">
+              {orphanage.name}
+              <Link to={`/orphanage/${orphanage.id}`}>
+                <FiArrowDownRight size={20} color="#fff" />
+              </Link>
+            </Popup>
           </Marker>
          )
        })}
@@ -72,7 +71,6 @@ function OrphanagesMap() {
       <Link to="/orphanage/create" className="create-orphanage">
           <FiPlus size={32} color="#fff" />
       </Link>
-
     </div>
   );
 }
